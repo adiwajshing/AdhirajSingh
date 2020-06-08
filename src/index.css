@@ -114,7 +114,7 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: stretch;
-  
+  padding: 15px;
 }
 .def-table {
   width: 30%;

@@ -23,24 +23,25 @@
     }
 }
 @keyframes move-into-corner {
-    0% {
-   
-    }
+    0% { }
     25% {
-       
         width: 75vmin;
+        height: 75min;
     }
     100% {
-        position: fixed;
-        left: 5px;
-        top: 5px;
+        left: -25px;
+        top: -25px;
         width: 55px;
+        height: 55px;
     }
 }
+@keyframes collapse-height {
+  to { width: 100%; height: 0px; }
+}
 @keyframes open-header {
-    0% { background-color: var(--secondary-col); width: 0; }
-    50% { background-color: var(--secondary-col); width: 200px; }
-    100% { background-color: var(--secondary-col); width: 260px; border-color: var(--text-col); }
+    0% { width: 0; opacity: 1; }
+    50% { width: 200px; opacity: 1;}
+    100% { width: 260px; opacity: 1; border-color: var(--text-col); }
   }
 @keyframes scale-up {
     0% { transform: scale(0, 0) }
@@ -56,7 +57,8 @@ body {
     position: fixed;
     top: 12px;
     left: 40px;
-    background-color: transparent;
+    background-color: var(--secondary-col);
+    opacity: 0;
     border-color: transparent;
     width: 0;
     height: 40px;
@@ -68,7 +70,6 @@ body {
     padding-left: 13px;
     text-align: center;
     z-index: -1;
-    
     border-style: solid;
     border-width: 2px;
   }
@@ -112,16 +113,28 @@ body {
     animation: intro-text calc(var(--intro-duration)/2) linear 0s 2 alternate;
     font-size: 6vw;
   }
+  /* kinda painful animation; TODO: figure something better */
   .portrait {
-    opacity: 0;
-    z-index: 1;
+    position: relative;
+    margin: 0;
+    padding: 0;
     width: 60vmin;
-    animation: slide-up calc(var(--intro-duration)/3) ease-out 0.5s forwards, 
-              move-into-corner 0.4s ease-out calc(var(--intro-duration)*2.2) forwards;
+    height: 60vmin;
+  }
+  .portrait img {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: move-into-corner 0.4s ease-out calc(var(--intro-duration)*2.2) forwards;
+  }
+  .intro-content {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
     
+    animation: slide-up calc(var(--intro-duration)/3) ease-out 0.5s forwards;
+  }
+  .collapsing-height {
+    animation: collapse-height 0.2s ease-out calc(var(--intro-duration)*2.2 + 0.4s) forwards;
   }

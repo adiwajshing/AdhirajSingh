@@ -32,21 +32,19 @@ function NavigationBar (props) {
   )
 }
 function Main () {
-  return <div className="def-flex" style={{zIndex: 20, position: "fixed", width: "100%"}}>
-    <div className="def-flex">
-      <div style={{width: "60vmin", height: "60vmin", position: "relative"}}>
-        <img className="circle-icon portrait def-shadow" src="/portrait.jpeg" />
-        <Header/>
-        <Sound/>
-        <NavigationBar/>
+  return <div className="def-flex collapsing-height" style={{zIndex: 20, position: "fixed", width: "100%", top: "0px", height: "100%"}}>
+    <div className="def-flex intro-content">
+      <div className="portrait collapsing-height">
+        <img className="circle-icon def-shadow" src="/portrait.jpeg" />
       </div>
-      
       <div style={{textAlign: "center", padding: "1.5rem"}}>
         <font className="main-text" style={{animationDelay: "1.9s"}}>Oh, hello there!</font><br/>
         <font className="main-text" style={{animationDelay: "2.2s"}}>I'm Adhiraj</font><br/>
       </div>
     </div>
-    
+    <Header/>
+    <Sound/>
+    <NavigationBar/>
   </div> 
 }
 function Panel (props) {
