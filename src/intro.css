@@ -1,0 +1,121 @@
+@import 'index.css';
+
+@keyframes intro {
+    from {background-position: 0%;}
+    to {background-position: 100%;}
+}
+@keyframes intro-text {
+    0% 
+    {opacity: 0; display: hidden;}
+    25% 
+    {opacity: 1; display: inline;}
+    100% 
+    {opacity: 1; display: inline;}
+    }
+@keyframes slide-up {
+    from {
+        transform: translate(0,200%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+@keyframes move-into-corner {
+    0% {
+   
+    }
+    25% {
+       
+        width: 75vmin;
+    }
+    100% {
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        width: 64px;
+    }
+}
+@keyframes open-header {
+    0% { background-color: var(--secondary-col); width: 0; }
+    50% { background-color: var(--secondary-col); width: 200px; }
+    100% { background-color: var(--secondary-col); width: 240px; border-color: var(--text-col); }
+  }
+@keyframes scale-up {
+    0% { transform: scale(0, 0) }
+    80% { transform: scale(1.2, 1.2) }
+    100% { transform: scale(1, 1) }
+}
+body {
+    background: linear-gradient(-90deg, var(--primary-col),var(--primary-col2));
+    background-size: 300% 300%;
+    animation: intro calc(var(--intro-duration)/2) ease-in calc(var(--intro-duration)/2) forwards;
+}
+.header {
+    position: fixed;
+    top: 20px;
+    left: 55px;
+    background-color: transparent;
+    border-color: transparent;
+    width: 0;
+    height: 40px;
+    animation: open-header 0.7s ease-out calc(var(--intro-duration) * 2.1 + 0.5s) forwards;
+    font-family: Def-Bold;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 1px;
+    padding-left: 15px;
+    text-align: center;
+    z-index: -1;
+    
+    border-style: solid;
+    border-width: 2px;
+  }
+  .header div:first-child {
+    font-family: Def-Bold;
+    opacity: 0;
+    animation: reveal 0.3s ease-out calc(var(--intro-duration) * 2.1 + 1.0s) forwards;
+  }
+  .sound-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border-color: var(--text-col);
+    border-width: 3px;
+    border-style: solid;
+    background-color: var(--secondary-col);
+    display: flex;
+    padding: 12px 7px 0 7px;
+    align-items: center;
+    transform: scale(0, 0);
+    transition: all 0.2s;
+    animation: scale-up 0.3s ease-out calc(var(--intro-duration) * 2.1 + 1.0s) forwards;
+  }
+  .sound-container:hover {
+    width: 74px;
+    height: 74px;
+  }
+  .main-text {
+    opacity: 0;
+    font-family: Def-Bold;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    animation: intro-text calc(var(--intro-duration)/2) linear 0s 2 alternate;
+    font-size: 6vw;
+  }
+  .portrait {
+    opacity: 0;
+    z-index: 1;
+    width: 60vmin;
+    animation: slide-up calc(var(--intro-duration)/3) ease-out 0.5s forwards, 
+              move-into-corner 0.4s ease-out calc(var(--intro-duration)*2.2) forwards;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+  }
