@@ -46,7 +46,7 @@ body {
   padding: 1rem;
 }
 /* Code for fast shadow transition: https://codepen.io/tribex/pen/ZxXJoO */
-.fast-shadow::before {
+.fast-shadow::after {
   content: ' ';
   position: absolute;
   top: 0;
@@ -55,30 +55,27 @@ body {
   left: 0;
   border-radius: inherit;
   z-index: -1;
-  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
   opacity: 0;
   transition: opacity 500ms;
 }
 .fast-shadow {
-  position: relative;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-.fast-shadow:hover::before {
-  opacity: 1;
-}
-.shadow-bg:hover {
+.fast-shadow:hover::after {
   opacity: 1;
 }
 .alert-panel {
   background-color: var(--secondary-col);
-  padding: 30px; 
-  margin: 1cm 0.5cm 0.5cm 0.5cm; 
+  padding: 3px; 
+  margin: 1cm 0.8cm 0.5cm 0.9cm; 
   border-radius: 1rem;
 }
 .alert-panel .alert-heading {
   color: var(--text-col);
   font-size: 1cm;
   font-family: Def-Bold;
+  padding: 3px;
 }
 
 .hr {
@@ -93,13 +90,13 @@ body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.image-circle {
+.circle-icon {
   object-fit: cover;
-  overflow: hidden;
   border-radius: 50%;
   border-color: var(--text-col);
   border-width: 3px;
   border-style: solid;
+  background-color: var(--secondary-col);
 }
 .item {
   border-radius: 0.8rem;
@@ -108,7 +105,7 @@ body {
   border-style: solid;
 }
 .def-shadow {
-  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 1px 15px 30px 0 rgba(0, 0, 0, 0.2), 0 20px 30px 0 rgba(0, 0, 0, 0.19);
 }
 .def-flex {
   margin: 0;
@@ -144,7 +141,7 @@ body {
 .img-button {
   cursor: pointer;
   overflow: hidden;
-  transition: transform 0.2s;
+  transition: transform 0.2s 0.1s;
   height: 70%;
 }
 .img-button:hover {

@@ -8,31 +8,37 @@ import SoundButton from './SoundButton/SoundButton'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 import './intro.css'
+import {ReactComponent as Ham} from './ham.svg'
 
 function Header (props) {
   const info = Data.header
   return (
     <div className="header def-shadow">
       <div style={{display: "flex", justifyContent: "space-evenly", alignItems: "center", width: "100%", height: "100%"}}>
-      {info.title}
-      {
-        info.links.map (obj => <img className="img-button" onClick={ () => window.open(obj.link, "_blank") } src={obj.img}/>)
-      }
+        {info.title}
+        {info.links.map (obj => <img className="img-button" onClick={ () => window.open(obj.link, "_blank") } src={obj.img}/>)}
       </div>
     </div>
   )
 }
 function Sound (props) {
-  return <div className="sound-container fast-shadow"> <SoundButton/> </div>
+  return <div className="main-icon fast-shadow circle-icon sound-icon"> <SoundButton/> </div>
 }
-
+function NavigationBar (props) {
+  return (
+    <div className="fast-shadow circle-icon main-icon nav-icon" >
+      <Ham style={{width: "100%", height: "100%"}}/>
+    </div>
+  )
+}
 function Main () {
   return <div className="def-flex" style={{zIndex: 20, position: "fixed", width: "100%"}}>
     <div className="def-flex">
       <div style={{width: "60vmin", height: "60vmin", position: "relative"}}>
-        <img className="image-circle portrait def-shadow" src="/portrait.jpeg" />
+        <img className="circle-icon portrait def-shadow" src="/portrait.jpeg" />
         <Header/>
         <Sound/>
+        <NavigationBar/>
       </div>
       
       <div style={{textAlign: "center", padding: "1.5rem"}}>
@@ -65,11 +71,13 @@ function Panel (props) {
 function About () {
   return (
   <div style={{minHeight: "50vh"}}>
-    <p style={{color: "white", fontSize: "40px"}}>
-      { Data.about }
-    </p>
-    <iframe height="50%" frameborder="0" className="item" style={{float: "right", maxWidth: "90%"}}
-src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBPCJuu3zpRG09ByoPeds51qzc7rfHXa3Y&q=Chandigarh,India"/>  
+    <div style={{height: "100%"}}>
+      <p style={{color: "white", fontSize: "40px"}}>
+        { Data.about }
+      </p>
+      <iframe height="50%" frameborder="0" className="item" style={{float: "right", maxWidth: "90%"}}
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBPCJuu3zpRG09ByoPeds51qzc7rfHXa3Y&q=Chandigarh,India"/>  
+    </div>
   </div>)
 }
 function Skillset () {
@@ -132,7 +140,7 @@ function App() {
      {Main()}
      <div style={{width: "100%", marginTop: "70px"}}>
      <DelayLoad component={<Panel title="About Me" body={About()}/>} time={5000}/>
-     <DelayLoad component={<Panel title="Projects I'm Proud Of" body={ProjectShowcase()}/>} time={5500}/>
+     <DelayLoad component={<Panel title="Open-Source Projects I'm Proud Of" body={ProjectShowcase()}/>} time={5500}/>
      <DelayLoad component={<Panel title="My Skillset" body={Skillset()}/>} time={5500}/>
      </div>
      

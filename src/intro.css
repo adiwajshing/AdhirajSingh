@@ -32,15 +32,15 @@
     }
     100% {
         position: fixed;
-        left: 10px;
-        top: 10px;
-        width: 64px;
+        left: 5px;
+        top: 5px;
+        width: 55px;
     }
 }
 @keyframes open-header {
     0% { background-color: var(--secondary-col); width: 0; }
     50% { background-color: var(--secondary-col); width: 200px; }
-    100% { background-color: var(--secondary-col); width: 240px; border-color: var(--text-col); }
+    100% { background-color: var(--secondary-col); width: 260px; border-color: var(--text-col); }
   }
 @keyframes scale-up {
     0% { transform: scale(0, 0) }
@@ -54,8 +54,8 @@ body {
 }
 .header {
     position: fixed;
-    top: 20px;
-    left: 55px;
+    top: 12px;
+    left: 40px;
     background-color: transparent;
     border-color: transparent;
     width: 0;
@@ -65,7 +65,7 @@ body {
     font-size: 18px;
     border-radius: 10px;
     padding: 1px;
-    padding-left: 15px;
+    padding-left: 13px;
     text-align: center;
     z-index: -1;
     
@@ -77,28 +77,34 @@ body {
     opacity: 0;
     animation: reveal 0.3s ease-out calc(var(--intro-duration) * 2.1 + 1.0s) forwards;
   }
-  .sound-container {
+  .main-icon {
+    cursor: pointer;
     position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border-color: var(--text-col);
-    border-width: 3px;
-    border-style: solid;
-    background-color: var(--secondary-col);
+    left: 5px;
     display: flex;
-    padding: 12px 7px 0 7px;
     align-items: center;
     transform: scale(0, 0);
-    transition: all 0.2s;
+    transition: all 0.2s 0.15s;
     animation: scale-up 0.3s ease-out calc(var(--intro-duration) * 2.1 + 1.0s) forwards;
+    width: 55px;
+    height: 55px;
+    z-index: 1;
   }
-  .sound-container:hover {
-    width: 74px;
-    height: 74px;
+  .sound-icon {
+    top: 70px;
+    padding: 12px 7px 0 7px; 
   }
+  
+  .nav-icon {
+    top: 135px;
+    animation-delay: calc(var(--intro-duration) * 2.1 + 1.3s);
+    padding: 10px;
+    fill: var(--text-col);
+  }
+  .nav-icon:hover {
+     
+  }
+
   .main-text {
     opacity: 0;
     font-family: Def-Bold;
