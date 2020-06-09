@@ -7,7 +7,7 @@ import "./volume.css"
  */
 export default function (props) {
     return (
-        <label class="volume">
+        <label className="volume">
             <input type="checkbox" onChange={ (e) => props.onChange && props.onChange(e) }/>
             <svg viewBox="0 0 108 96">
                 <path d="M7,28 L35,28 L35,28 L59,8 L59,88 L35,68 L7,68 C4.790861,68 3,66.209139 3,64 L3,32 C3,29.790861 4.790861,28 7,28 Z"></path>

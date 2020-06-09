@@ -3,15 +3,15 @@ export default {
         title: "Adhiraj Singh",
         links: [
             {
-                img: "/GitHub-Mark-64px.png",
+                img: "GitHub-Mark-64px.png",
                 link: "https://github.com/adiwajshing"
             },
             {
-                img: "/LI-In-Bug.png",
+                img: "LI-In-Bug.png",
                 link: "https://in.linkedin.com/in/adiwajshing"
             },
             {
-                img: "/sendmail.png",
+                img: "sendmail.png",
                 link: "mailto:adhirajsingh1001@gmail.com"
             }
         ]
