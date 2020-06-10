@@ -55,7 +55,7 @@ body {
 .header {
     position: fixed;
     top: 12px;
-    left: 40px;
+    left: 45px;
     background-color: var(--secondary-col);
     opacity: 0;
     border-color: transparent;
