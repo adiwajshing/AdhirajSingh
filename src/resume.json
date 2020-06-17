@@ -1,0 +1,8 @@
+{
+    "skills": {
+        "languages": ["Swift+SPM", "Javascript", "C", "Python", "SQL", "C#", "C++", "HTML+CSS"],
+        "env": ["Node+NPM", "Vapor", "iOS", "Web (React)", "Android", "XCode", "VSCode"],
+        "tools": ["Writing Test Suites", "Docker", "AWS", "Google Cloud Platform",
+        "Writing APIs", "Backend Development", "Web-Sockets", "Writing Docs"]
+    }
+}

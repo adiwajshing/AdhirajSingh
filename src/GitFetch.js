@@ -18,6 +18,9 @@ module.exports = {
         const response = await fetch(`https://raw.githubusercontent.com/${repo}/master/demo/metadata.json`)
         if (response.status === 200) {
             var json = await response.json ()
+            if (!Array.isArray(json.content)) {
+                json.content = [json.content]
+            }
             json.sample.url = `https://raw.githubusercontent.com/${repo}/master/demo/${json.sample.name}`
             json.url = `https://github.com/${repo}`
 

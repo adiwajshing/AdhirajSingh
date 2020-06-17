@@ -29,7 +29,7 @@
         height: 75min;
     }
     100% {
-        left: 0px;
+        right: 12px;
         top: 0px;
         width: 55px;
     }
@@ -55,7 +55,7 @@ body {
 .header {
     position: fixed;
     top: 12px;
-    left: 45px;
+    right: 45px;
     background-color: var(--secondary-col);
     opacity: 0;
     border-color: transparent;
@@ -66,7 +66,7 @@ body {
     font-size: 18px;
     border-radius: 10px;
     padding: 1px;
-    padding-left: 13px;
+    padding-right: 13px;
     text-align: center;
     z-index: 1;
     border-style: solid;
@@ -76,6 +76,12 @@ body {
     font-family: Def-Bold;
     opacity: 0;
     animation: reveal 0.3s ease-out 1.5s forwards;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
   }
   .main-buttons {
     position: fixed;
@@ -126,4 +132,5 @@ body {
   }
   .intro-content {
     pointer-events: none;
+    align-content: space-between;
   }

@@ -1,0 +1,42 @@
+
+/* actual dropdown animation */
+.dropdown .dropdown-menu {
+    padding: 5px;
+    margin: 0px;
+    transition: all 0.3s;
+    background-color: var(--secondary-col);
+    border-style: none;
+    opacity: 1;
+  }
+  .dropdown .dropdown-menu .dropdown-item {
+    margin: 0px;
+    font-size: 20px; 
+    font-family: Def-Bold;
+    color: var(--text-col);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .dropdown.show .dropdown-menu .dropdown-item:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+  }
+  .dropdown.show .dropdown-menu .dropdown-item {
+    opacity: 1;
+    transition: opacity 0.3s 0.2s, transform 0.2s;
+  }
+  .dropdown.show .dropdown-menu {
+    opacity: 1;
+  }
+  
+  .alert-panel {
+    background-color: var(--secondary-col);
+    padding: 12px; 
+    margin: 25px 20px; 
+    border-radius: 1.0rem;
+  }
+  .alert-panel .alert-heading {
+    color: var(--text-col);
+    font-size: xx-large;
+    font-family: Def-Bold;
+    padding: 3px;
+  }
