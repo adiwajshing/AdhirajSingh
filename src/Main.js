@@ -2,16 +2,30 @@ import React, {useState, useEffect} from 'react'
 import Dropdown from 'react-bootstrap/Dropdown'
 import Portrait from './img/portrait.jpeg'
 import SoundButton from './SoundButton/SoundButton'
-import {ReactComponent as Ham} from './ham.svg'
-import Data from './data'
+import {ReactComponent as Ham} from './img/ham.svg'
+import resume from './resume.json'
+
+import github from './img/GitHub-Mark-64px.png'
+import linkedin from './img/LI-In-Bug.png'
+import sendmail from './img/sendmail.png'
+
+function smoothScroll (id) {
+  document.getElementById (id).scrollIntoView ({behavior: 'smooth'})
+  window.location.hash = `#${id}`
+  //window.scrollTo ({top: loc, left: 0, behavior: 'smooth'})
+}
 
 function Header (props) {
-  const info = Data.header
+  const links = [
+      {img: github, link: resume.github.url},
+      {img: linkedin, link: resume.linkedin},
+      {img: sendmail, link: `mailto:${resume.email}`}
+  ]
   return (
     <div className="header def-shadow">
       <div>
-        {info.title}
-        {info.links.map ((obj,i) => <img className="img-button" key={`header-${i}`} onClick={ () => window.open(obj.link, "_blank") } src={obj.img}/>)}
+        {resume.name}
+        {links.map ((obj,i) => <img className="img-button" key={`header-${i}`} onClick={ () => window.open(obj.link, "_blank") } src={obj.img}/>)}
       </div>
     </div>
   )
@@ -28,12 +42,12 @@ function NavigationBar (props) {
     <Dropdown drop="left" className="dropdown" style={{padding: "8px"}}>
       <Dropdown.Toggle as={HamIcon}> </Dropdown.Toggle>
         
-      <Dropdown.Menu className="def-shadow" >
+      <Dropdown.Menu className="def-shadow">
         {
           props.panels.map ((e,i) => (
             <>
-              <Dropdown.Item href={`#${e.id}`} key={`action-${i}`}>{e.title}</Dropdown.Item>
-              {i+1 < props.panels.length && <hr />}
+              <Dropdown.Item onClick={() => smoothScroll(e.id)} key={`action-${i}`}>{e.title}</Dropdown.Item>
+              {i+1 < props.panels.length && <hr/>}
             </>
           ))
         }
@@ -59,7 +73,7 @@ function Main (props) {
     <div className="main-buttons" style={{top: `${props.rect.top}px`, right: `${window.innerWidth-props.rect.x-props.rect.width}px`, width: `${props.rect.width}px`}}>
       <div style={{transform: `scale(1,1)`}} className="fast-shadow circle-icon main-icon" key={`main-icon-p`}>
         <div className="portrait-i">
-          <img width="100%" height="100%" src={Portrait} href="#about"/>  
+          <img width="100%" height="100%" src={Portrait} onClick={() => smoothScroll("about")}/>  
         </div>
       </div>
       {

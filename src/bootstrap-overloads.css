@@ -12,6 +12,7 @@
     margin: 0px;
     font-size: 20px; 
     font-family: Def-Bold;
+    text-decoration: none;
     color: var(--text-col);
     opacity: 0;
     transition: opacity 0.3s;
@@ -29,14 +30,36 @@
   }
   
   .alert-panel {
-    background-color: var(--secondary-col);
-    padding: 12px; 
-    margin: 25px 20px; 
-    border-radius: 1.0rem;
+    /*background-color: var(--secondary-col);*/
+    padding: 1rem; 
+    margin: 0px;
+    border-radius: 0%;
+  }
+  .alert-panel hr {
+    background-color: var(--text-col);
   }
   .alert-panel .alert-heading {
     color: var(--text-col);
     font-size: xx-large;
     font-family: Def-Bold;
-    padding: 3px;
+    padding: 0.0rem;
+  }
+  .alert-panel-inner {
+    background-color: var(--primary-col);
+    padding: 9px; 
+    margin: 12px 0px; 
+    border-radius: 7px;
+  }
+  .alert-panel-inner hr {
+    background-color: var(--text-col);
+  }
+
+  .alert-panel-inner .alert-heading * {
+    color: var(--text-col);
+    font-size: medium;
+    padding: 2px;
+  }
+  .alert-panel-inner .alert-heading *:first-child:first-child {
+    font-family: Def-Bold;
+    font-size: large;
   }

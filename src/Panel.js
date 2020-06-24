@@ -12,10 +12,9 @@ export default function Panel (props) {
     })
   
     return (
-      <Alert variant="panel" className="def-shadow" >
+      <Alert variant="panel" className={props.className}>
         <div className="scroll-anchor" id={props.id}></div>
-        <Alert.Heading>{title}</Alert.Heading>
-        <hr/>
+        <Alert.Heading className='title-underlined'>{title}</Alert.Heading>
         <div>
           {props.body}
         </div>

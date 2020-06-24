@@ -1,8 +1,91 @@
 {
+    "name": "Adhiraj Singh",
+    "email": "adhirajsingh1001@gmail.com",
+    "github": {
+        "url": "https://github.com/adiwajshing",
+        "username": "adiwajshing"
+    },
+    "linkedin": "https://in.linkedin.com/in/adiwajshing",
+    "locations": {
+        "home": "https://www.google.com/maps/embed/v1/place?q=Chandigarh,India&zoom=6"
+    },
+    "description": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet facilisis magna etiam tempor orci eu lobortis."
+    ],
     "skills": {
-        "languages": ["Swift+SPM", "Javascript", "C", "Python", "SQL", "C#", "C++", "HTML+CSS"],
-        "env": ["Node+NPM", "Vapor", "iOS", "Web (React)", "Android", "XCode", "VSCode"],
-        "tools": ["Writing Test Suites", "Docker", "AWS", "Google Cloud Platform",
-        "Writing APIs", "Backend Development", "Web-Sockets", "Writing Docs"]
-    }
+        "languages": ["Swift + SPM", "Javascript", "C", "Python", "SQL", "C#", "C++", "Java", "HTML + CSS", "Pinescript"],
+        "env": ["Unity", "Node + NPM", "Vapor", "iOS", "Web (React)", "Android", "XCode", "VSCode", "CLIs", "TradingView"],
+        "tools": ["Writing Test Suites", "Docker", "AWS", "Game Development", "GCP",
+        "Writing APIs", "Backend Development", "Frontend Development", "Dev-Ops", "Web-Socket APIs", "Writing Docs"]
+    },
+    "work-ex": [
+        {
+            "title": "Technology Minister",
+            "company": "Ashoka University",
+            "length": "Mar 2020 - Present",
+            "description": [
+
+            ]
+        },
+        {
+            "title": "Head Developer",
+            "company": "USP Studios -- Mumbai, India",
+            "length": "Jul 2018 - Jan 2020",
+            "description": [
+                "Oversaw the mobile app development initiative of USP Studios.",
+                "Worked primarily on <a href='https://www.youtube.com/watch?v=eBacHuW3rbM'>Ludo B Boss</a>, developed the backend in Swift & led development on the frontend in Unity.",
+                "Managed a team of mobile app developers and oversaw their work on multiple projects,", 
+                "some can still be found <a href='https://apps.apple.com/us/developer/usp-studios-private-limited/id1048881023'>here</a>"
+            ]
+        },
+        {
+            "title": "Mobile App Developer",
+            "company": "USP Studios -- Mumbai, India",
+            "length": "Nov 2016 - Jul 2018",
+            "description": [
+                "Built the <a href='https://apps.apple.com/us/app/bob-the-train-friends-tv/id1388913982'>Bob the Train</a> suite of apps for iOS, Android & Alexa, along with an app to manage the content served on the formerly mentioned.",
+                "The apps were made to require zero-maintainence, not requiring regular software updates.",
+                "Moreover, they serve video content & handle subscriptions in a headless fashion, requiring no running back-end."
+            ]
+        },
+        {
+            "title": "Volunteer",
+            "company": "I Break My Silence -- Chandigarh, India",
+            "length": "Dec 2015 - Feb 2016",
+            "description": [
+                "Helped conduct sessions on gender based violence in schools.",
+                "Raised awareness on gender based violence via on ground campaigns.",
+                "Designed banners, posters & prepared reports."
+            ]
+        },
+        {
+            "title": "Intern",
+            "company": "GrayCell Technologies Exports -- Chandigarh, India",
+            "length": "Jul 2015 - Jan 2016",
+            "description": [
+                "Worked on an experimental project, to gamify the website NaukriSePareshan."
+            ]
+        },
+        {
+            "title": "2x WWDC Scholar",
+            "company": "Apple, Worldwide Developers Conference",
+            "length": "Jun 2015 & Jun 2016",
+            "description": [
+                "Won Apple's WWDC scholarship, twice in a row.",
+                "Got to attend their conference in San Francisco, and learn hands-on skills from Apple engineers"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "title": "Ashoka University",
+            "length":"Aug 2018 - May 2021",
+            "diploma": "B.Sc. Computer Science, minor in Economics"
+        },
+        {
+            "title": "St. John's High School",
+            "length":"Apr 2005 - May 2018",
+            "diploma": "Graduated high school, with final grade: 95%"
+        }
+    ]
 }

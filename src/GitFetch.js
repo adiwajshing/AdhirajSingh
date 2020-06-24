@@ -1,5 +1,13 @@
 const fetch = require('node-fetch')
 module.exports = {
+    fetchGist: async function (username, gist, file) {
+        return fetch (`https://gist.githubusercontent.com/${username}/${gist}/raw/${file}`)
+    },
+    fetchJSONResume: function (username, gist) {
+        const response = await this.fetchGist (username, gist, 'resume.json')
+        const json = await response.json ()
+        return json
+    },
     /**
      * @returns {string[]} array of the names of the user's repos
      */

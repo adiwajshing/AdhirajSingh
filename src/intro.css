@@ -1,5 +1,9 @@
 @import 'index.css';
 
+:root {
+  --header-icon-size: 3.1rem;
+}
+
 @keyframes intro {
     from {background-position: 0%;}
     to {background-position: 100%;}
@@ -29,9 +33,9 @@
         height: 75min;
     }
     100% {
-        right: 12px;
+        right: 10px;
         top: 0px;
-        width: 55px;
+        width: var(--header-icon-size);
     }
 }
 @keyframes collapse-height {
@@ -40,7 +44,7 @@
 @keyframes open-header {
     0% { width: 0; opacity: 1; }
     50% { width: 200px; opacity: 1;}
-    100% { width: 260px; opacity: 1; border-color: var(--text-col); }
+    100% { width: 230px; opacity: 1; border-color: var(--text-col); }
   }
 @keyframes scale-up {
     0% {  }
@@ -54,19 +58,19 @@ body {
 }
 .header {
     position: fixed;
-    top: 12px;
-    right: 45px;
+    top: calc(var(--header-icon-size)*0.25);
+    right: calc(var(--header-icon-size)*0.75);
     background-color: var(--secondary-col);
     opacity: 0;
     border-color: transparent;
     width: 0;
-    height: 40px;
+    height: calc(var(--header-icon-size)*0.7);
     animation: open-header 0.7s ease-out 0.45s forwards;
     font-family: Def-Bold;
-    font-size: 18px;
-    border-radius: 10px;
+    font-size: 16px;
+    border-radius: 7px;
     padding: 1px;
-    padding-right: 13px;
+    padding-right: calc(var(--header-icon-size)*0.25);
     text-align: center;
     z-index: 1;
     border-style: solid;

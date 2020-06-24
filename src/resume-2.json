@@ -1,0 +1,87 @@
+{
+    "basics": {
+        "name": "Adhiraj Singh",
+        "label": "Full-Stack Developer",
+        "image": "",
+        "summary": "I'm a full stack developer passionate about building zero-maintainence apps. I like to deploy an app and just forget about it.",
+        "website": "https://adiwajshing.github.io/AdhirajSingh",
+        "email": "adhirajsingh1001@gmail.com",
+        "location": {
+        "city": "Chandigarh,India",
+        "countryCode": "IN"
+        },
+        "profiles": [
+            {
+              "username": "adiwajshing",
+              "url": "https://in.linkedin.com/in/adiwajshing",
+              "network": "linkedin"
+            },
+            {
+              "url": "https://github.com/adiwajshing",
+              "username": "adiwajshing",
+              "network": "github"
+            }
+        ]
+    },
+    "education": [
+        {
+          "endDate": "2021-05-01",
+          "startDate": "2018-08-18",
+          "area": "Computer Science, minor in Economics",
+          "studyType": "B.Sc.",
+          "institution": "Ashoka University"
+        },
+        {
+            "endDate": "2018-05-01",
+            "startDate": "2005-04-15",
+            "area": "Sciences",
+            "studyType": "High School Diploma",
+            "institution": "St. John's High School"
+        }
+    ],
+    "references": [
+
+    ],
+    "skills": [
+        {
+            "keywords": [
+              "Swift + XCode",
+              "Java + Android Studio",
+              "HTML + CSS",
+              "React + JSX",
+              "React Bootstrap",
+              "Javascript"
+            ],
+            "name": "Frontend"
+        }
+    ],
+    "work": [
+        {
+            "summary": "",
+            "website": "https://ausg.in",
+            "company": "Ashoka University",
+            "pinned": true,
+            "location": "Delhi-NCR",
+            "position": "Technology Minister",
+            "startDate": "2020-03-06"
+          }
+    ],
+    "awards": [
+        {
+            "title": "WWDC 16 Scholar",
+            "awarder": "Apple",
+            "summary": "Won Apple's WWDC scholarship Got to attend their conference in San Francisco, and learn hands-on skills from Apple engineers."
+        },
+        {
+            "title": "WWDC 15 Scholar",
+            "awarder": "Apple",
+            "summary": "Won Apple's WWDC scholarship Got to attend their conference in San Francisco, and learn hands-on skills from Apple engineers."
+        }
+    ],
+    "interests": [
+        {"name": "Music"},
+        {"name": "Playing the piano"},
+        {"name": "Fitness, Squash"},
+        {"name": "Discussing film + literature"}
+    ]
+}
